@@ -63,3 +63,23 @@ input::placeholder {
   border-radius: 20px;
   padding: 0.7rem 1rem;
 }
+
+.span-error {
+  display: none;
+  padding: 0.5em;
+  color: var(--color-light-red);
+  font-style: italic;
+  font-size: 0.6em;
+  text-align: center;
+  @include mq(medium) {
+    text-align: left;
+    font-size: 0.75em;
+  }
+}
+
+form.invalid input:invalid,
+form.invalid select:invalid,
+form.invalid input.invalid,
+form.invalid select.invalid {
+  border: 1px solid var(--color-light-red);
+}

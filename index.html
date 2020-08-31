@@ -32,11 +32,16 @@
 
       <section class="notify">
         <form action="#" class="notify__form">
-          <input
-            class="notify__email"
-            type="email"
-            placeholder="Your email address..."
-          />
+          <div>
+            <input
+              class="notify__email"
+              id="email"
+              type="email"
+              placeholder="Your email address..."
+              required
+            />
+            <span class="span-error"></span>
+          </div>
           <input class="notify__submit" type="submit" value="Notify Me" />
         </form>
       </section>

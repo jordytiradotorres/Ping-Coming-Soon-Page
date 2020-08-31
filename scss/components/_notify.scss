@@ -2,18 +2,19 @@
   &__form {
     @include mq(medium) {
       display: flex;
-      align-items: center;
+      align-items: flex-start;
+    }
+    > div {
+      @include mq(medium) {
+        margin-right: 0.7rem;
+        width: 70%;
+      }
     }
   }
 
   &__email {
     @extend %button;
     border: 1px solid var(--color-pale-blue);
-
-    @include mq(medium) {
-      margin-right: 0.7rem;
-      width: 70%;
-    }
   }
 
   &__submit {
@@ -26,8 +27,13 @@
     cursor: pointer;
     box-shadow: 0 5px 5px lighten(hsl(223, 87%, 63%), 20%);
 
+    &:hover {
+      background-color: lighten(hsl(223, 87%, 63%), 5%);
+    }
+
     @include mq(medium) {
       width: 30%;
+      margin-top: 0;
     }
   }
 }

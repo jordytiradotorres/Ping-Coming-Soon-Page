@@ -65,6 +65,24 @@ input::placeholder {
   border-radius: 20px;
   padding: 0.7rem 1rem; }
 
+.span-error {
+  display: none;
+  padding: 0.5em;
+  color: var(--color-light-red);
+  font-style: italic;
+  font-size: 0.6em;
+  text-align: center; }
+  @media (min-width: 768px) {
+    .span-error {
+      text-align: left;
+      font-size: 0.75em; } }
+
+form.invalid input:invalid,
+form.invalid select:invalid,
+form.invalid input.invalid,
+form.invalid select.invalid {
+  border: 1px solid var(--color-light-red); }
+
 .header {
   text-align: center;
   padding-top: 3em; }
@@ -81,13 +99,13 @@ input::placeholder {
 @media (min-width: 768px) {
   .notify__form {
     display: flex;
-    align-items: center; } }
+    align-items: flex-start; } }
+@media (min-width: 768px) {
+  .notify__form > div {
+    margin-right: 0.7rem;
+    width: 70%; } }
 .notify__email {
   border: 1px solid var(--color-pale-blue); }
-  @media (min-width: 768px) {
-    .notify__email {
-      margin-right: 0.7rem;
-      width: 70%; } }
 .notify__submit {
   background-color: var(--color-blue);
   text-align: center;
@@ -96,9 +114,12 @@ input::placeholder {
   font-weight: 600;
   cursor: pointer;
   box-shadow: 0 5px 5px #aec3f9; }
+  .notify__submit:hover {
+    background-color: #668ff4; }
   @media (min-width: 768px) {
     .notify__submit {
-      width: 30%; } }
+      width: 30%;
+      margin-top: 0; } }
 
 .illustration {
   margin-top: 5em;
