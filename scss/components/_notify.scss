@@ -1,0 +1,33 @@
+.notify {
+  &__form {
+    @include mq(medium) {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__email {
+    @extend %button;
+    border: 1px solid var(--color-pale-blue);
+
+    @include mq(medium) {
+      margin-right: 0.7rem;
+      width: 70%;
+    }
+  }
+
+  &__submit {
+    @extend %button;
+    background-color: var(--color-blue);
+    text-align: center;
+    color: white;
+    margin: 1em 0;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 5px 5px lighten(hsl(223, 87%, 63%), 20%);
+
+    @include mq(medium) {
+      width: 30%;
+    }
+  }
+}

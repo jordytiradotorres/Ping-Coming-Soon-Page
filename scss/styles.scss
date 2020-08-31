@@ -1,2 +1,7 @@
 @import './config/variables';
+@import './mixins/media-queries';
 @import './config/base';
+@import './components/header';
+@import './components/notify';
+@import './components/illustration';
+@import './components/footer';

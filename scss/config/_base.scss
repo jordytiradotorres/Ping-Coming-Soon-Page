@@ -1,0 +1,65 @@
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: var(--font-Libre-Franklin);
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  margin: 0;
+}
+figure {
+  margin: 0;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+ul {
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  list-style-type: none;
+}
+
+ul li a {
+  text-decoration: none;
+
+  display: inline-block;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+
+  @include mq(medium) {
+    width: 80%;
+  }
+  @include mq(large) {
+    max-width: 1200px;
+  }
+}
+
+input:focus {
+  outline: none;
+}
+input::placeholder {
+  color: var(--color-pale-blue);
+}
+
+%button {
+  width: 100%;
+  border: none;
+  border-radius: 20px;
+  padding: 0.7rem 1rem;
+}
